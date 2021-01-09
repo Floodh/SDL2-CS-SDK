@@ -1,0 +1,25 @@
+Settings{
+
+    Controls{
+        up: UP;
+        down: DOWN;
+        right: RIGHT;
+        left: LEFT;
+
+        esc: ESCAPE;
+        enter: Return;
+        tab: TAB;
+    } 
+}
+
+
+// readme //
+//
+// if you want to edit the controls you can replace the SDLK key code value with your preferred SDL_Keycode
+// the SDL_Keycode for each key can be found on the following webpage: https://wiki.libsdl.org/SDL_Keycode
+// 
+// Syntax:
+// structure the settings you whish to change as follows:
+// <option name>: <value>;
+// do not add speacing between words and the characters "{", ":" and ";"
+// the program will read and register all commands within all brackets
