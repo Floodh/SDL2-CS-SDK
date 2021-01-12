@@ -18,7 +18,7 @@ class Visual : Visual_data {
 
         // initilize the window
         Console.WriteLine("         Creating the window");
-        window = SDL.SDL_CreateWindow("Unreachable", 100, 50, Visual_data.window_width, Visual_data.window_height, SDL.SDL_WindowFlags.SDL_WINDOW_OPENGL | SDL.SDL_WindowFlags.SDL_WINDOW_SHOWN);
+        window = SDL.SDL_CreateWindow("Window name", 100, 50, Visual_data.window_width, Visual_data.window_height, SDL.SDL_WindowFlags.SDL_WINDOW_OPENGL | SDL.SDL_WindowFlags.SDL_WINDOW_SHOWN);
 
         // creates a redner objects which is attached to a given window
         Console.WriteLine("         Creating the renderer");
@@ -112,6 +112,13 @@ class Visual : Visual_data {
         // texture_area is the area of the texture set we wan't to draw
         // screen_area is the area of the window we want to draw the texture
         SDL.SDL_RenderCopy(renderer, texture, ref texture_area, ref screen_area);
+
+    }
+
+    // draws a straight line between the 2 given points
+    public static void draw_line(int x_start, int y_start, int x_end, int y_end){
+
+        SDL.SDL_RenderDrawLine(renderer, x_start, y_start, x_end, y_end);
 
     }
 
